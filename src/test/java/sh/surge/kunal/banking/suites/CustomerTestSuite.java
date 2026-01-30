@@ -1,4 +1,4 @@
-package com.cognizant.banking.suites;
+package sh.surge.kunal.banking.suites;
 
 import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectPackages;

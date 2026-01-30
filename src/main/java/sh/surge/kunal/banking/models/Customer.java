@@ -1,4 +1,4 @@
-package com.cognizant.banking.models;
+package sh.surge.kunal.banking.models;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

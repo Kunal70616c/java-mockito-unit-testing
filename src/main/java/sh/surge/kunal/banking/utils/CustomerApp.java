@@ -1,17 +1,15 @@
-package com.cognizant.banking.utils;
+package sh.surge.kunal.banking.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Stream;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.cognizant.banking.configurations.AppConfig;
-import com.cognizant.banking.models.Customer;
-import com.cognizant.banking.models.FullName;
-import com.cognizant.banking.repositories.CustomerRepositoryImpl;
-import com.cognizant.banking.services.CustomerService;
+import sh.surge.kunal.banking.configurations.AppConfig;
+import sh.surge.kunal.banking.models.Customer;
+import sh.surge.kunal.banking.models.FullName;
+import sh.surge.kunal.banking.services.CustomerService;
 import com.github.javafaker.Faker;
 
 public class CustomerApp {

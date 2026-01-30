@@ -1,12 +1,12 @@
-package com.cognizant.banking.services;
+package sh.surge.kunal.banking.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cognizant.banking.models.Customer;
-import com.cognizant.banking.repositories.CustomerRepository;
+import sh.surge.kunal.banking.models.Customer;
+import sh.surge.kunal.banking.repositories.CustomerRepository;
 
 @Service
 public class CustomerService {

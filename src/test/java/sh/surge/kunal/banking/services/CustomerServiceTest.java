@@ -1,4 +1,4 @@
-package com.cognizant.banking.services;
+package sh.surge.kunal.banking.services;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -7,12 +7,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.cognizant.banking.models.Customer;
-import com.cognizant.banking.models.FullName;
-import com.cognizant.banking.repositories.CustomerRepository;
-import com.cognizant.banking.utils.CustomerApp;
+import sh.surge.kunal.banking.models.Customer;
+import sh.surge.kunal.banking.models.FullName;
+import sh.surge.kunal.banking.repositories.CustomerRepository;
+import sh.surge.kunal.banking.utils.CustomerApp;
 import com.github.javafaker.Faker;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,9 +19,9 @@ import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
 public class CustomerServiceTest {
-    @Mock
+    @Mock // Mock is used to create a fake object of the class
 	private CustomerRepository customerRepository;
-    @InjectMocks
+    @InjectMocks // InjectMocks is used to create a fake object of the class
 	private CustomerService customerService;   
     private static Customer customer;    
     private static FullName fullName;
@@ -43,9 +42,14 @@ public class CustomerServiceTest {
         customer.setEmail(faker.internet().emailAddress());
         customer.setContactNo(Long.parseLong(faker.phoneNumber().subscriberNumber(10)));
         customer.setPassword(faker.internet().password(8, 10, true, true, true));
-        Mockito.when(customerRepository.addCustomer(customer)).thenReturn(customer);        
+        // Mockito.when is used to mock the behavior of the method
+        // Here we are mocking the addCustomer method of the customerRepository
+        // and returning the customer object
+        Mockito.when(customerRepository.addCustomer(customer)).thenReturn(customer);
         Customer result =customerService.addCustomer(customer);
+        // assertEquals is used to compare the expected and actual values
         assertEquals(customer, result);
+        // assertEquals is used to compare the expected and actual values
         assertEquals(result.getAccountNo(), customer.getAccountNo());
         
     	

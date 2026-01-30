@@ -1,5 +1,6 @@
-package com.cognizant.banking.models;
+package sh.surge.kunal.banking.models;
 
+import jakarta.annotation.security.PermitAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +15,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import com.cognizant.banking.utils.CustomerApp;
+import sh.surge.kunal.banking.utils.CustomerApp;
 import com.github.javafaker.Faker;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,12 +28,13 @@ public class CustomerTest {
 	private Customer customer;
 	private FullName fullName;
 	
-	@BeforeEach
+	@BeforeEach // @BeforeEach is used to run the code before each test
 	public void setUp() {
 		customer = new Customer();
 		fullName = new FullName();
 		
 	}
+
 	@Nested
 	class FullNameTest{
 		@ParameterizedTest

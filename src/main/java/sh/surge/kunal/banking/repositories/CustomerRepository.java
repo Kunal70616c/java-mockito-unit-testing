@@ -1,8 +1,8 @@
-package com.cognizant.banking.repositories;
+package sh.surge.kunal.banking.repositories;
 
 import java.util.List;
 
-import com.cognizant.banking.models.Customer;
+import sh.surge.kunal.banking.models.Customer;
 
 public interface CustomerRepository {
 	

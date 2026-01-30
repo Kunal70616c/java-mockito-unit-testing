@@ -1,4 +1,4 @@
-package com.cognizant.banking.repositories;
+package sh.surge.kunal.banking.repositories;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,13 +7,11 @@ import java.util.List;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.cognizant.banking.configurations.AppConfig;
-import com.cognizant.banking.models.Customer;
-import com.cognizant.banking.models.FullName;
+import sh.surge.kunal.banking.models.Customer;
+import sh.surge.kunal.banking.models.FullName;
 
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository {

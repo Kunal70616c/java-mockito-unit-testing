@@ -1,4 +1,4 @@
-package com.cognizant.banking.configurations;
+package sh.surge.kunal.banking.configurations;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
